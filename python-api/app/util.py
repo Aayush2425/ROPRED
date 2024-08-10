@@ -18,9 +18,15 @@ prompt_text = "Hi Gemini, I’m interested in learning more about rockets and sp
 
 def get_res_from_gem(user_input, type, prompt):
     if type == 'text':
-        input_prompt = prompt + user_input
-        response = model.generate_content(input_prompt)
-        return response.text
+        responsee = model.generate_content(user_input)  # Example API call
+        print("API Response:", responsee)
+        try:
+            return responsee.text  # Or access the relevant part
+        except AttributeError:
+            return {"error": "Invalid response format"}
+        # input_prompt = prompt + user_input
+        # response = model.generate_content(input_prompt)
+        # return response.text
     # elif type == 'image':
         # img = Image.open('img.png')
         # res = model.generate_content(["write 5 points about this image",img], stream=True)
