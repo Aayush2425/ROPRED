@@ -1,31 +1,20 @@
 "use client";
-import { motion } from "framer-motion";
-import { HeroHighlight } from "../Aceternity/HeroHighlight.tsx";
+import { AboutUsAnime } from "../Aceternity/AboutUsAnime.jsx";
+import { Header } from "../components/Header.jsx";
+import rocket from "../assets/images/rocket.png";
 
 export function AboutUs() {
   return (
     <>
-            <HeroHighlight>
-        <motion.h1
-            initial={{
-            opacity: 0,
-            y: 20,
-            }}
-            animate={{
-            opacity: 1,
-            y: [20, -5, 0],
-            }}
-            transition={{
-            duration: 0.5,
-            ease: [0.4, 0.0, 0.2, 1],
-            }}
-            className="text-3xl px-4 font-bold  text-white max-w-4xl leading-relaxed lg:leading-snug text-center mx-auto "
-        >
-            Developing a machine learning model to predict the success of rocket launches based on key features such as rocket specifications, weather conditions, launch site characteristics, and historical launch data. The project involves data collection, preprocessing, feature engineering, and the application of classification algorithms like logistic regression and decision trees to accurately forecast launch outcomes.
-            
-        </motion.h1>
-        </HeroHighlight>
-        
+        <div className="bg-black text-white overflow-x-hidden">
+            <Header />
+            <AboutUsAnime />
+            <div className="overflow-hidden">
+                <div className="h-screen w-screen absolute "><img src={rocket} alt="" className="absolute h-full w-full"/></div>
+                <div className="h-screen w-screen relative opacity-80 bg-black flex justify-center items-center text-xl">The project involves creating a platform that processes satellite imagery using machine learning to identify specific patterns such as deforestation, crop health, urban expansion, or natural disasters. As part of the user interaction, a Gemini chat box is implemented to facilitate real-time communication with users, providing insights and answers based on their queries.</div>
+            </div>
+        </div>
+
     </>
   );
 }
