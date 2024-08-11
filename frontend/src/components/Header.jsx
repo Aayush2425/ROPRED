@@ -12,6 +12,7 @@ export const Header = () => {
            </div>
            <div className='flex gap-4'>
                <Link to="/search" className='hover:cursor-pointer hover:text-gray-700 '>QBot</Link>
+                <Link to="/dash" className='hover:cursor-pointer hover:text-gray-700'>Dashboard</Link>
                 <Link to="/aboutus" className='hover:cursor-pointer hover:text-gray-700'>About</Link>
            </div>
         </div>
